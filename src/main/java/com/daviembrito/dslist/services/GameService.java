@@ -14,10 +14,10 @@ public class GameService {
     private GameRepository gameRepository;
 
     public List<GameShortDTO> findAllGameShort() {
-        return convertGamesToDTO(gameRepository.findAll());
+        return convertGameToDTO(gameRepository.findAll());
     }
 
-    private List<GameShortDTO> convertGamesToDTO(List<Game> games) {
+    private List<GameShortDTO> convertGameToDTO(List<Game> games) {
         return games.stream().map(GameShortDTO::new).toList();
     }
 }
