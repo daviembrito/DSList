@@ -1,6 +1,7 @@
 package com.daviembrito.dslist.dto;
 
 import com.daviembrito.dslist.entities.Game;
+import com.daviembrito.dslist.projections.GameShortProjection;
 
 public class GameShortDTO {
     private Long id;
@@ -17,6 +18,14 @@ public class GameShortDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameShortDTO(GameShortProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public Long getId() {
