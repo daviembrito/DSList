@@ -37,7 +37,7 @@ cd DSList
 ```shell
 mvn clean install
 ```
-- Configure the database information depending on the profile selected in "application.properties". By default, the test profile is loaded. You can change H2 configuration properties in "application-test.properties".You must provide a valid database URL, username and password
+- Configure the database information depending on the profile selected in "application.properties". By default, the test profile is loaded. You can change H2 configuration properties in "application-test.properties". You must provide a valid database URL, username and password
 - Start the server
 ```shell
 mvn spring-boot:run
@@ -45,18 +45,27 @@ mvn spring-boot:run
 
 ## Endpoints
 
-- **GET /games**: returns a simplified version of all games stored in the database
+- **GET /games**: returns a simplified version of all games stored in the database. 
+
+Example:
 
 ![/games example](https://cdn.discordapp.com/attachments/400108474748370946/1111869891411185714/image.png)
 
 - **GET /games/{id}**: returns all atributes of the game with the provided id
 
+Example:
+
 ![/games/id example](https://cdn.discordapp.com/attachments/400108474748370946/1111871502678245467/image.png)
 
 - **GET /lists**: returns all game lists from the database
 
+Example:
+
 ![/lists example](https://cdn.discordapp.com/attachments/400108474748370946/1111872564927668244/image.png)
 
 - **GET /lists/{id}/games**: returns all games belonging to the list with the specified ID
+
+Example:
+
 
 ![/lists/id/games example](https://cdn.discordapp.com/attachments/400108474748370946/1111873402832162866/image.png)
